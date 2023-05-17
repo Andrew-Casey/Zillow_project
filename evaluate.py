@@ -282,7 +282,7 @@ def baseline_model(train, y_train):
     
     # print baseline
     baseline = round(y_train.mean(),2)
-    print(f' Baseline model is : {baseline}')
+    print(f' Baseline mean is : {baseline}')
     return metrics_df
 
 def multiple_regression(X_train_scaled, X_validate_scaled,y_validate,y_train, metrics_df):
@@ -565,9 +565,9 @@ def plot_residuals(y_train, y_test, pred_pr):
     plt.annotate("Baseline", (65, 81), color='grey')
 
     plt.title("Comparison of Predicted and Actual Values")
-    plt.ylabel("Actual Value")
-    plt.xlabel("Predicted Final Value")
-    plt.legend()
+    plt.ylabel("Actual Value in millions (USD)")
+    plt.xlabel("Predicted Value in millions (USD)")
+
 
     plt.grid(True, linestyle='--', alpha=0.5) 
 
@@ -591,7 +591,7 @@ def examine_target(train):
     # View Target
     sns.histplot(train.Tax_Value)
     plt.title('Target = Tax Value')
-    plt.xlabel('Tax Value')
+    plt.xlabel('Tax Value in millions (USD)')
     plt.ylabel('Count')
     plt.show()
 
@@ -622,7 +622,7 @@ def examine_Sqft_and_TxValue(train):
 
     # Show the plot
     plt.xlabel('Square Feet')
-    plt.ylabel('Tax Value')
+    plt.ylabel('Tax Value in millions (USD)')
     plt.title('Square Feet vs. Target')
     plt.show()
 
@@ -653,7 +653,7 @@ def examine_Year_Built_and_TxValue(train):
 
     # Show the plot
     plt.xlabel('Year Built')
-    plt.ylabel('Tax Value')
+    plt.ylabel('Tax Value in millions (USD)')
     plt.title('Year Built vs. Tax Value')
     plt.show()
 
@@ -714,7 +714,7 @@ def explore_target(y_train):
     """
     #visualize baseline
     plt.hist(y_train)
-    plt.xlabel("Value")
+    plt.xlabel("Tax Value in millions (USD)")
     plt.ylabel("Number of houses")
     plt.title('Distribution of home values')
     plt.show()
