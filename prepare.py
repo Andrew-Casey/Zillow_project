@@ -9,7 +9,6 @@ from sklearn.preprocessing import MinMaxScaler
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-
 def split_data(df):
     '''
     take in a DataFrame and target variable. return train, validate, and test DataFrames.
@@ -21,8 +20,24 @@ def split_data(df):
                                        random_state=123)
     return train, validate, test
 
-
 def scaled_df(train, validate, test):
+    """
+    This function scales the train, validate, and test data using the MinMaxScaler.
+
+    Parameters:
+    train (pandas DataFrame): The training data.
+    validate (pandas DataFrame): The validation data.
+    test (pandas DataFrame): The test data.
+
+    Returns:
+    Tuple of:
+        X_train_scaled (pandas DataFrame): The scaled training data.
+        X_validate_scaled (pandas DataFrame): The scaled validation data.
+        X_test_scaled (pandas DataFrame): The scaled test data.
+        y_train (pandas Series): The target variable for the training data.
+        y_validate (pandas Series): The target variable for the validation data.
+        y_test (pandas Series): The target variable for the test data.
+    """
 
     X_train = train[['Sqft','Bedrooms','Bathrooms','LA','Orange','Ventura']]
     X_validate = validate[['Sqft','Bedrooms','Bathrooms','LA','Orange','Ventura']]
@@ -55,6 +70,23 @@ def scaled_df(train, validate, test):
     return X_train_scaled, X_validate_scaled, X_test_scaled, y_train, y_validate, y_test
 
 def scaled_df2(train, validate, test):
+    """
+    This function scales the train, validate, and test data using the MinMaxScaler.
+
+    Parameters:
+    train (pandas DataFrame): The training data.
+    validate (pandas DataFrame): The validation data.
+    test (pandas DataFrame): The test data.
+
+    Returns:
+    Tuple of:
+        X_train_scaled (pandas DataFrame): The scaled training data.
+        X_validate_scaled (pandas DataFrame): The scaled validation data.
+        X_test_scaled (pandas DataFrame): The scaled test data.
+        y_train (pandas Series): The target variable for the training data.
+        y_validate (pandas Series): The target variable for the validation data.
+        y_test (pandas Series): The target variable for the test data.
+    """
 
     X_train = train[['Sqft','Bedrooms','Bathrooms','Year_Built','Pool']]
     X_validate = validate[['Sqft','Bedrooms','Bathrooms','Year_Built','Pool']]
