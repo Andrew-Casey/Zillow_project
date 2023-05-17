@@ -1,60 +1,58 @@
 # Zillow_project
 
 <!-- #region -->
-Zillow - individual project
 
 # Objectives:
 
-This project aims to explore the Zillow database and determine predictive factors relating to house tax value. The database contains quite a bit of data collected on houses in the LA, Ventura and Orange County area. 
+- This project aims to explore the Zillow database and determine predictive factors relating to house tax value. The database contains an extensive collection of data on houses in the LA, Ventura and Orange County area. 
 
 # Project Goal:
 
 - Discover drivers of Tax_Value
-- Use drivers to develop a machine learning model to predict whether future tax value for homes in the area studied.
+- Use drivers to develop a machine learning model to predict future tax value for homes in the area of study.
 - Predicting house values could be used to understand where to make changes in business practices. Ultimately, increasing homes sold... and thus, more revenue.
 
 # Initial questions:
 
-I am curious to see how square feet, location, number of bedrooms and bathrooms affects tax value at telco churn.
+- I am curious to see how square feet, location, number of bedrooms and bathrooms affect tax value.
 
 # The Plan:
 
-Aquire data from codeup.com
+- Aquire data from codeup.com
 
-Prepare data
+- Prepare data
 
-Create encoded columns from existing data
+- Create encoded columns from existing data
 
-Explore data in search of drivers of churn
+- Explore data in search of drivers of tax value
 
-Answer the following initial questions:
-- How does Sqft affect Tax_Value?
-- How does Bedrooms affect Tax_Value?
-- How does Bathrooms affect Tax_Value?
-- How does Lot_Size affect Tax_Value?
-- How does Year_Built affect Tax_Value?
-- How does having a Pool affect Tax_Value?
-- Does location affect Tax_Value? Which location is the most expensive? The cheapest?
+- Answer the following initial questions:
+    - How does Sqft affect Tax_Value?
+    - How does Bedrooms affect Tax_Value?
+    - How does Bathrooms affect Tax_Value?
+    - How does Lot_Size affect Tax_Value?
+    - How does Year_Built affect Tax_Value?
+    - How does having a Pool affect Tax_Value?
+    - Does location affect Tax_Value? Which location is the most expensive? The cheapest?
 
-Develop a Model to predict house value:
-
-- Use drivers identified in explore to build predictive models
-- Evaluate models on train and validate data
-- Select the best model based on lowest RMSE and highest R^2 values
-- Evaluate the best model on test data
+- Develop a Model to predict house value:
+    - Use drivers identified in explore to build predictive models
+    - Evaluate models on train and validate data
+    - Select the best model based on lowest RMSE and highest R^2 values
+    - Evaluate the best model on test data
 - Draw conclusions
 
 # Steps to Reproduce:
 
 - Clone this repo.
-- Acquire the data from codeup.com
+- Acquire the data from codeup.com using an env.py file with requisite credentials.
 - Put the data in the file containing the cloned repo.
 - Run notebook.
 
 ### Additional Requirements:
 
 - to have an env.py file with applicable username and password for the codeup.com database
-- download the pro_acquire, pro_prep, pro_model, and knear .py files as well
+- download the acquire, evaluate, explore, prepare, and wrangle .py files
 
 - import the following:
     - import pandas as pd
@@ -115,16 +113,12 @@ Develop a Model to predict house value:
 
 
 # Recommendations:
-- All of the selected features contribute to the assessed tax value of a home. I recommend better data collecting, to avoid massive amounts of null values in various categories (garage, story). I believe a better predictive model can be achieved with the ability to add features previously discarded. 
+- All of the selected features contribute to the assessed tax value of a home. I recommend better data collecting, to avoid massive amounts of null values in various categories (garage, story). I believe a better predictive model can be achieved with the ability to add additional features to the model. 
 
-- Location always plays a large part in buying a home. LA, according to the data is the least desirable place to live. - I believe this is due to homes being older on average in LA (1956) as compared to Orange and Ventura (1973, 1975 respectively). To further explore location, I believe further delineating City and Zip Code as well as building materials in these areas may shed light on what residents of these areas desire or not. 
+- Location always plays a large part in buying a home. LA, according to the data is the least desirable place to live. - I believe this is due to homes being older on average in LA (1956) as compared to Orange and Ventura (1973, 1975 respectively). To further explore location, delineating City and Zip Code as well as building materials in these areas may shed light on what residents of these areas desire or not. 
 
 
 # Next steps:
-- There has to be a better way to identify Zip Codes, City and other location metrics. With more time I would like to further delineate location between the three counties.  
-    - I want to continue my research and analyze the relationships between multiple features in relation to tax value, for example.. building materials, pool, Ventura, 2 Car Garage, 1 Story, Big yard and how they interact with each other. Even though the selected features affect tax value, their relationships to other factors may direct where we want to focus our marketing efforts.
+- There has to be a better way to identify Zip Codes, City and other location metrics. With more time I would like to further investigate location metrics between the three counties.  
+- Also, I want to continue my research and analyze the relationships between multiple features in relation to tax value, for example.. building materials, pool, Ventura, 2 Car Garage, 1 Story, Big yard and how they interact with each other. Even though the selected features affect tax value, their relationships to other factors may direct where we want to focus our marketing efforts.
 <!-- #endregion -->
-
-```python
-
-```
